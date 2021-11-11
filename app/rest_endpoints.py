@@ -1,29 +1,24 @@
-
-
 import requests
 import json
 from rest_api import userParams, headerParams, apiLinks
 
 
-
-
 def userSessionCreate():
-
     header_data = {
-        'Content-Type': headerParams.contentType,        
+        'Content-Type': headerParams.contentType,
         'Authorization': headerParams.apiToken
-        }
+    }
 
     body_data = {
         "user": {
             "login": userParams.userLogin,
             "password": userParams.userPassword,
             "email": userParams.userEmail
-            },
-            }
+        },
+    }
 
-    api_url = apiLinks.url_sessionCreate    
-    api_response = requests.post(api_url, headers = header_data, json=body_data)
+    api_url = apiLinks.url_sessionCreate
+    api_response = requests.post(api_url, headers=header_data, json=body_data)
     json_data = json.loads(api_response.text)
 
     tok_ing = json_data['User-Token']  # JSON Data - user token
@@ -35,110 +30,99 @@ def userSessionCreate():
     print(stat_code)  # print status code
 
 
-
 def createUser(newUserLogin, newUserEmail, newUserPassword):
-
     header_data = {
-        'Content-Type': headerParams.contentType,        
+        'Content-Type': headerParams.contentType,
         'Authorization': headerParams.apiToken,
         'Etag': headerParams.etagValue,
         'Accept': headerParams.acceptData
-        }
+    }
 
-    body_data = {        
+    body_data = {
         "user": {
             "login": newUserLogin,
             "email": newUserEmail,
             "password": newUserPassword
-            },
-            }
-    
-    api_url = apiLinks.url_userCreate   
-    api_response = requests.post(api_url, headers = header_data, json=body_data)
+        },
+    }
 
-    print(api_response.url)  
-    print(api_response.status_code) 
+    api_url = apiLinks.url_userCreate
+    api_response = requests.post(api_url, headers=header_data, json=body_data)
+
+    print(api_response.url)
+    print(api_response.status_code)
     print(api_response.text)
 
 
-
-
-
 def createNewQuote(quoteAuthor, quoteContent):
-
     header_data = {
-        'Content-Type': headerParams.contentType,        
+        'Content-Type': headerParams.contentType,
         'Authorization': headerParams.apiToken,
         'User-Token': headerParams.userToken
-        }
+    }
 
     body_data = {
         "quote": {
             "author": quoteAuthor,
-            "body": quoteContent                
-            },
-            }
+            "body": quoteContent
+        },
+    }
 
     api_url = apiLinks.url_createQuote
 
-    api_response = requests.post(api_url, headers = header_data, json=body_data)
-    
-    print(api_response.url)  
-    print(api_response.status_code) 
+    api_response = requests.post(api_url, headers=header_data, json=body_data)
+
+    print(api_response.url)
+    print(api_response.status_code)
     print(api_response.text)
 
 
 def userQuotes():
-
     header_data = {
-        'Content-Type': headerParams.contentType,        
+        'Content-Type': headerParams.contentType,
         'Authorization': headerParams.apiToken
-        }
-
+    }
 
     api_url = apiLinks.url_userQuotes
 
-    api_response = requests.get(api_url, headers = header_data )
+    api_response = requests.get(api_url, headers=header_data)
 
-    print(api_response.url)  
-    print(api_response.status_code) 
+    print(api_response.url)
+    print(api_response.status_code)
     print(api_response.text)
 
 
 def quoteOfTheDay():
-
     header_data = {
-        'Content-Type': headerParams.contentType,        
+        'Content-Type': headerParams.contentType,
         'Authorization': headerParams.apiToken,
         'User-Token': headerParams.userToken,
-        'Etag': headerParams.etagValue,    
+        'Etag': headerParams.etagValue,
         'Accept': headerParams.acceptData
-        }
+    }
 
     api_url = apiLinks.url_qotd
 
-    api_response = requests.get(api_url, headers = header_data )
+    api_response = requests.get(api_url, headers=header_data)
 
-    print(api_response.url)  
-    print(api_response.status_code) 
+    print(api_response.url)
+    print(api_response.status_code)
     print(api_response.text)
 
 
 def quoteSpecific(quoteID):
-
     header_data = {
-        'Content-Type': headerParams.contentType,        
+        'Content-Type': headerParams.contentType,
         'Authorization': headerParams.apiToken
-        }
+    }
 
-    api_url = apiLinks.url_userQuotes + '/' + quoteID # quote ID
+    api_url = apiLinks.url_userQuotes + '/' + quoteID  # quote ID
 
-    api_response = requests.get(api_url, headers = header_data )
+    api_response = requests.get(api_url, headers=header_data)
 
-    print(api_response.url)  
-    print(api_response.status_code) 
+    print(api_response.url)
+    print(api_response.status_code)
     print(api_response.text)
-
 
 # # Create new Quote
 # createNewQuote(
