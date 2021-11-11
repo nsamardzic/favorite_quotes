@@ -1,11 +1,7 @@
 """-----------------------------------------------------------
 Name             : Favorite Quotes - Get specific Quote (based on Quote ID)
-Description      :
 Created By       : Nenad Samardzic
-License          : GNU GENERAL PUBLIC LICENSE Version 3,
 Date:            : September 2018
-Powered          : Python-3.7
-
 -----------------------------------------------------------"""
 
 from rest_api import apiLinks, userParams, headerParams
