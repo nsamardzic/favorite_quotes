@@ -4,8 +4,7 @@ Created By       : Nenad Samardzic
 Date:            : September 2018
 -----------------------------------------------------------"""
 
-from rest_api import apiLinks, userParams, headerParams
-from params import databaseLogin
+from resources.params import databaseLogin
 import requests
 import mysql.connector
 import time

@@ -1,5 +1,3 @@
-
-
 class db_params:
     def __init__(self, dbhost, dbuser, dbpasswd, activeDatabase, newDatabase):
         self.dbhost = dbhost
@@ -7,7 +5,6 @@ class db_params:
         self.dbpasswd = dbpasswd
         self.activeDatabase = activeDatabase
         self.newDatabase = newDatabase
-        
 
 
 class accountUsers:
@@ -22,33 +19,25 @@ class accountUsers:
 
 # Database login parameters
 databaseLogin = db_params(
-    'localhost',    # mysql host adderss
-    'ime',          # mysql username
-    'root',         # mysql password
-    'test_db',      # mysql database name - Active database
-    'test_db4'       # mysql database name - New Database name that you want to create
-    )
-  
+    'localhost',  # mysql host address
+    'ime',  # mysql username
+    'root',  # mysql password
+    'test_db2_again',  # mysql database name - Active database
+    'test_db2_name'  # mysql database name - New Database name that you want to create
+)
 
 # Create new user parameters
 newUser = accountUsers(
-    'Petar',                       # user Firs name
-    'Petrovic',                   # user Last name
-    'ppetrovic@gmail.com',     # user Email
-    'street 22',          # user address
-    'Surcin',                  # user city
-    'Serbia'                     # user country
-    )
+    'Petar',  # user Firs name
+    'Petrovic',  # user Last name
+    'ppetrovic@gmail.com',  # user Email
+    'street 22',  # user address
+    'Surcin',  # user city
+    'Serbia'  # user country
+)
 
-
-removeAccount = deleteUser(
-    '9',                        # User ID
-    'someaddress4@gmail.com',    # User Email
-    "Ime1"                       # User First name
-    ) 
-
-
-
-
-
-
+# removeAccount = deleteUser(
+#     '9',  # User ID
+#     'someaddress4@gmail.com',  # User Email
+#     "Ime1"  # User First name
+# )

@@ -2,7 +2,7 @@
 
 import requests
 import json
-from rest_api import userParams, headerParams, apiLinks
+from resources.rest_api import userParams, headerParams, apiLinks
 
 
 

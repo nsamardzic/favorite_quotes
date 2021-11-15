@@ -1,6 +1,6 @@
 
 import mysql.connector
-from params import databaseLogin
+from resources.params import databaseLogin
 
 
 mydb = mysql.connector.connect(

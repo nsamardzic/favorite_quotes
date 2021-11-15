@@ -1,0 +1,33 @@
+{
+  "database": [
+    {
+      "db_host_address": "localhost",
+      "db_user_name": "ime",
+      "db_pass": "root",
+      "db_name": "test_db",
+      "db_new_db_name": "test_new_db",
+      "verified": true
+    }
+  ],
+    "users": [
+    {
+      "db_host_address": "localhost",
+      "db_user_name": "ime",
+      "db_pass": "root",
+      "db_name": "test_db",
+      "db_new_db_name": "test_new_db",
+      "verified": true
+    }
+  ],
+      "api": [
+    {
+      "hd_user_token": "IWO9CwTvhmrNFFkXbdPllTkc4RUJIlHsH6REyK6GiI6mVKkqeyzbXS4zG+xSqqBak7KoOCZGCstOoMAm/LRt0w==",
+      "hd_api_token": "Token token=2fac29a69309e3d566df7ece3ce79dc5",
+      "hd_etag": "root",
+      "hd_contentType": "test_db",
+      "db_new_db_name": "test_new_db",
+      "verified": true
+    }
+  ]
+
+}
