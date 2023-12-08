@@ -5,28 +5,29 @@
       "db_user_name": "ime",
       "db_pass": "root",
       "db_name": "test_db",
-      "db_new_db_name": "test_new_db",
-      "verified": true
+      "db_new_db_name": "test_new_db"
     }
   ],
-    "users": [
+  "users": [
     {
-      "db_host_address": "localhost",
-      "db_user_name": "ime",
-      "db_pass": "root",
-      "db_name": "test_db",
-      "db_new_db_name": "test_new_db",
-      "verified": true
+      "user_first_name": "Petar",
+      "user_last_name": "Petrovic",
+      "user_email": "ppetrovic@gmail.com",
+      "user_country": "Serbia",
+      "user_city": "Belgrade",
+      "user_address": "street 22"
     }
   ],
-      "api": [
+  "account": [
     {
-      "hd_user_token": "IWO9CwTvhmrNFFkXbdPllTkc4RUJIlHsH6REyK6GiI6mVKkqeyzbXS4zG+xSqqBak7KoOCZGCstOoMAm/LRt0w==",
-      "hd_api_token": "Token token=2fac29a69309e3d566df7ece3ce79dc5",
-      "hd_etag": "root",
-      "hd_contentType": "test_db",
-      "db_new_db_name": "test_new_db",
-      "verified": true
+      "login_account_email": "execom.testing@gmail.com",
+      "login_account_name": "execom_test11",
+      "login_account_password": "password123"
+    }
+  ],
+  "api": [
+    {
+      "api_base_link": "https://favqs.com/api"
     }
   ]
 

@@ -6,6 +6,8 @@ gen
 
 # Ignore the content of .VSCODE folder
 /.vscode/*
+/.vs/*
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
